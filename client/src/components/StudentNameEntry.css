@@ -1,0 +1,64 @@
+/* client/src/components/StudentNameEntry.css */
+
+.name-entry-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--light-gray-bg);
+  font-family: sans-serif;
+}
+
+.name-entry-card {
+  width: 100%;
+  max-width: 550px;
+  text-align: center;
+}
+
+.name-entry-card h1 {
+  font-size: 32px;
+  color: var(--dark-text);
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Simplified style for the single paragraph */
+.description-text {
+  color: var(--light-text);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.name-entry-card form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.name-entry-card label {
+  font-size: 14px;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.name-entry-card input {
+  padding: 16px;
+  border: none;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.name-entry-card input::placeholder {
+    color: #b0b0b0;
+}
+
+.name-entry-card input:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px #f5f3ff;
+}

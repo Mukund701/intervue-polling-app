@@ -1,0 +1,52 @@
+/* client/src/index.css */
+:root {
+  --primary-purple: #7765DA;
+  --dark-purple: #5767D0;
+  --deep-purple: #4F0DCE;
+  --light-gray-bg: #F2F2F2;
+  --dark-text: #373737;
+  --light-text: #6E6E6E;
+}
+
+.welcome-header {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(90deg, #7765DA, #5767D0);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px; 
+}
+
+.welcome-header::before {
+  content: '✦';
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: var(--dark-purple);
+  color: white;
+  border: none;
+  width: 180px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: center;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--deep-purple);
+}
+
+.btn-primary:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}

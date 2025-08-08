@@ -1,0 +1,78 @@
+/* client/src/components/ParticipantsPopup.css */
+.pp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* The centering properties have been removed to allow custom positioning */
+  z-index: 2000;
+}
+
+.pp-modal-content {
+  /* New positioning rules */
+  position: absolute;
+  bottom: 100px; /* Position above the chat button */
+  right: 30px;
+
+  background-color: #ffffff;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 350px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  transform-origin: bottom right; /* Animation will scale from the corner */
+}
+
+.pp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  flex-shrink: 0; /* Prevents header from shrinking */
+}
+
+.pp-header h3 {
+  margin: 0;
+  font-size: 16px; /* Adjusted font size */
+  font-weight: 500;
+  color: var(--dark-text);
+}
+
+.pp-close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--light-text);
+  cursor: pointer;
+}
+
+.pp-participants-list {
+  list-style-type: none;
+  padding: 8px 16px;
+  margin: 0;
+  overflow-y: auto;
+}
+
+/* New style for the list header */
+.pp-list-header {
+    padding: 12px 4px;
+    color: var(--light-text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pp-participants-list li {
+  padding: 12px 4px;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--dark-text);
+  font-size: 15px;
+}
+
+.pp-participants-list li:last-child {
+  border-bottom: none;
+}

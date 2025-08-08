@@ -1,0 +1,181 @@
+/* client/src/components/TeacherCreatePoll.css */
+.teacher-poll-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: var(--light-gray-bg);
+  font-family: sans-serif;
+  padding: 40px;
+}
+.poll-form-card {
+  width: 100%;
+  max-width: 800px;
+}
+.poll-form-card h1 {
+  color: var(--dark-text);
+  font-size: 32px;
+}
+.poll-form-card p {
+  color: var(--light-text);
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+.form-group {
+  margin-bottom: 24px;
+}
+.question-header, .options-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Change #1: Making labels bold */
+.question-header label, .options-header label {
+  font-weight: bold; 
+  color: var(--dark-text);
+}
+
+.timer-dropdown {
+  border: 1px solid #dcdcdc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236E6E6E%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: .65em auto;
+  padding-right: 30px;
+}
+.form-group textarea, .option-input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid transparent;
+  background-color: #e9e9e9;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+.form-group textarea:focus, .option-input:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+}
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+.char-counter {
+  text-align: right;
+  font-size: 12px;
+  color: var(--light-text);
+  padding-top: 4px;
+}
+.option-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 16px;
+}
+.option-number {
+  background-color: var(--primary-purple);
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.option-input {
+  flex-grow: 1;
+}
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.radio-group label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--dark-text);
+    user-select: none;
+}
+.radio-group input[type="radio"] {
+    display: none;
+}
+.radio-group label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #dcdcdc;
+    border-radius: 50%;
+    background: #fff;
+}
+.radio-group input[type="radio"]:checked + label::before {
+    border-color: var(--primary-purple);
+    background-color: var(--primary-purple);
+}
+.radio-group input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+/* Change #2: Making Add More button bold */
+.add-option-btn {
+  background: none;
+  border: 1px solid var(--primary-purple);
+  color: var(--primary-purple);
+  font-weight: bold; 
+  cursor: pointer;
+  padding: 12px 20px;
+  width: fit-content;
+  border-radius: 8px;
+  margin-top: 24px; 
+  transition: all 0.2s;
+  display: block;
+  text-align: left;
+}
+.add-option-btn:hover {
+    background-color: #f5f3ff;
+}
+.form-divider {
+    border: none;
+    border-top: 1px solid #cccccc; 
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+/* Change #3: Making Ask Question button bold */
+.ask-question-btn {
+  display: block;
+  margin-left: auto;
+  background-color: var(--dark-purple);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold; 
+  cursor: pointer;
+}

@@ -1,0 +1,3 @@
+# Ignore server dependencies
+node_modules
+.env

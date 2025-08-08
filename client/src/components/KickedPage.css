@@ -1,0 +1,24 @@
+/* client/src/components/KickedPage.css */
+.kicked-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: var(--light-gray-bg);
+  padding: 20px;
+}
+
+.kicked-content h1 {
+  color: var(--dark-text);
+  font-size: 32px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.kicked-content p {
+  color: var(--light-text);
+  font-size: 16px;
+  max-width: 400px;
+}
