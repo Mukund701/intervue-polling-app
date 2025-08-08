@@ -11,7 +11,8 @@ import LiveResultsPage from './components/LiveResultsPage';
 import StudentQuestionPage from './components/StudentQuestionPage';
 import KickedPage from './components/KickedPage';
 
-const socket = io('http://localhost:4000');
+// This line is updated to be deployment-ready
+const socket = io(import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000');
 
 function App() {
   const [userRole, setUserRole] = useState(null);
@@ -73,7 +74,6 @@ function App() {
 
     if (userRole === 'student') {
       if (!userName) return <StudentNameEntry onNameSubmit={handleNameSubmit} />;
-      // The 'students' prop is now correctly passed to StudentWaitingRoom
       if (!poll) return <StudentWaitingRoom students={students} />;
       if (hasVoted) return <LiveResultsPage poll={poll} userRole={userRole} socket={socket} students={students} />;
       return <StudentQuestionPage poll={poll} onAnswerSubmit={handleAnswerSubmit} students={students} />;
