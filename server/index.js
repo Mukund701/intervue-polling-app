@@ -5,12 +5,25 @@ const { Server } = require("socket.io");
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+
+// --- START OF CHANGES ---
+// Explicitly define the URL of your live frontend application
+const clientURL = "https://musical-douhua-64f7c7.netlify.app";
+
+const corsOptions = {
+  origin: clientURL,
+  methods: ["GET", "POST"]
+};
+
+// Use the specific CORS options for both Express and Socket.IO
+app.use(cors(corsOptions));
 
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: { origin: "*", methods: ["GET", "POST"] }
+  cors: corsOptions
 });
+// --- END OF CHANGES ---
+
 
 const PORT = process.env.PORT || 4000;
 
@@ -84,7 +97,7 @@ io.on('connection', (socket) => {
        console.log(`SERVER: A user (likely a teacher) has disconnected.`);
     }
   });
-}); // This is the single correct closing bracket for io.on('connection',...)
+});
 
 app.get('/', (req, res) => {
   res.send('Polling Server is running!');
